@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Data
 {
-    public class Recipe
+    class Comments
     {
-        
+        public int Id { get; set; }
     }
 }
