@@ -34,7 +34,7 @@ namespace RecipeBox.Data
         }
 
         public DbSet<Recipe> Recipes { get; set; }
-
+        public DbSet<Comments> Comments { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

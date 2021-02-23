@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeBox.Data
+namespace RecipeBox.Models
 {
-    public class Comments
+    public class CommentCreate
     {
         [Key]
         public int CommentId { get; set; }
-
-        [ForeignKey("Recipe")]
-        public int RecipeId { get; set; }
-
+        [Required]
+        [MaxLength(8000)]
         public string Text { get; set; }
-
-
+        [Required]
+        public int RecipeId { get; set; }
+        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
+
     }
 }
