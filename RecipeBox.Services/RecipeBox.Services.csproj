@@ -54,12 +54,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentService.cs" />
     <Compile Include="RecipeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RecipeBox.Data\RecipeBox.Data.csproj">
+      <Project>{59d97f9f-99a5-4328-a0d6-68d81a645ded}</Project>
+      <Name>RecipeBox.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RecipeBox.Models\RecipeBox.Models.csproj">
+      <Project>{e4eb9b8e-5a61-4d4d-b232-397f28112d69}</Project>
+      <Name>RecipeBox.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
