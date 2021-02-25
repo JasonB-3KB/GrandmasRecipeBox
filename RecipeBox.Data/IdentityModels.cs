@@ -34,7 +34,6 @@ namespace RecipeBox.Data
         }
 
         public DbSet<Recipe> Recipes { get; set; }
-        public object Recipe { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
