@@ -10,6 +10,7 @@ namespace RecipeBox.Data
 {
     public class Recipe
     {
+
         [Key]
         public int RecipeId { get; set; }
         [Required]
@@ -81,5 +82,8 @@ namespace RecipeBox.Data
         Dessert,
         Soup,
         Appetizer
+
+
+
     }
 }
