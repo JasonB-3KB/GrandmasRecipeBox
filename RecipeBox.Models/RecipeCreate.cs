@@ -10,7 +10,6 @@ namespace RecipeBox.Models
     public class RecipeCreate
     {
         public string RecipeName { get; set; }
-        public string Ingredients { get; set; }
         public string Instructions { get; set; }
         public int SourceId { get; set; }
         public CuisineCategory TypeOfCuisine { get; set; }
