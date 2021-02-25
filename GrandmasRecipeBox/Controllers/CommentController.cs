@@ -9,5 +9,6 @@ namespace GrandmasRecipeBox.Controllers
 {
     public class CommentController : ApiController
     {
+
     }
 }
