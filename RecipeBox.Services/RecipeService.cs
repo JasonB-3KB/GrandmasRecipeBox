@@ -1,4 +1,6 @@
 ﻿using System;
+using RecipeBox.Data;
+using RecipeBox.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,5 @@ namespace RecipeBox.Services
 {
     public class RecipeService
     {
-
     }
 }

@@ -14,11 +14,13 @@ namespace RecipeBox.Data
     {
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
-            // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
-            var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
+        // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
+        var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string FullName { get; set; }//...................................................................................
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -34,7 +36,16 @@ namespace RecipeBox.Data
         }
 
         public DbSet<Recipe> Recipes { get; set; }
+
+
+
+        public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<RecipeContent> RecipeContents { get; set; }
+
+
         public DbSet<Comments> Comments { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
