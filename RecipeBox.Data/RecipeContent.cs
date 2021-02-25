@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Data
 {
-    class RecipeContent
+    public class RecipeContent
     {
         public int RecipeId { get; set; }
         public int IngredientId { get; set; }

@@ -5,19 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeBox.Data
+namespace RecipeBox.Models
 {
-    
-    public class Ingredient
+    public class IngredientCreate
     {
-        [Key]
         public int IngredientId { get; set; }
+
         [Required]
+        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
+        [MaxLength(100, ErrorMessage = "Max. characters = 100. Remove characters.")]
         public string IngredientName { get; set; }
-        // stretch goal
-        // public int Kcal { get; set; }
-        // public int Protein { get; set; }
-        // public int Carbs { get; set; }
-        // public int Fat { get; set; }
     }
 }
