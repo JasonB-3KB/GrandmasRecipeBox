@@ -1,22 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeBox.Data
+namespace RecipeBox.Models
 {
-    public class Source
+    class SourceListItem
     {
-        [Key]
-        public int SourceId { get; set; }
-
-        [Required]
         public string SourceName { get; set; }
 
-        [Required]
         public string Origin { get; set; }
-
     }
 }
