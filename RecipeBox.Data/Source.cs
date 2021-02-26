@@ -13,7 +13,7 @@ namespace RecipeBox.Data
         public int SourceId { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string SourceName { get; set; }
 
         [Required]
         public string Origin { get; set; }

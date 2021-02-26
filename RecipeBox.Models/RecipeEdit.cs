@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Models
 {
-    public class RecipeUpdate
+    public class RecipeEdit
     {
         public int RecipeId { get; set; }
         public string RecipeName { get; set; }
