@@ -88,7 +88,9 @@
   </ItemGroup>
   <ItemGroup>
 
+
     <Compile Include="IngredientEdit.cs" />
+
 
 
     <Compile Include="RecipeDetails.cs" />
