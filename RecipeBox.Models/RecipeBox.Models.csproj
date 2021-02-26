@@ -87,26 +87,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="IngredientEdit.cs" />
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="RecipeListItem.cs" />
-
-
     <Compile Include="IngredientCreate.cs" />
-
     <Compile Include="CommentCreate.cs" />
     <Compile Include="CommentDetail.cs" />
     <Compile Include="CommentEdit.cs" />
     <Compile Include="CommentItem.cs" />
-
-
     <Compile Include="RecipeCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <Compile Include="RecipeUpdate.cs" />
+    <Compile Include="RecipeEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RecipeBox.Data\RecipeBox.Data.csproj">

@@ -9,7 +9,12 @@ using System.Threading.Tasks;
 namespace RecipeBox.Services
 {
     public class IngredientService
-    { 
+    {
+        private readonly Guid _userId;
+        public IngredientService(Guid userId)
+        {
+            _userId = userId;
+        }
         public bool CreateIngredient(IngredientCreate model)
         {
             var entity =
@@ -56,5 +61,19 @@ namespace RecipeBox.Services
             }
         }
         
+        public bool UpdateIngredient(IngredientEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Ingredients
+                        .Single(e => e.IngredientId == model.IngredientId && e.OwnerId == _userId);
+
+                entity.IngredientName = model.IngredientName;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
