@@ -13,16 +13,26 @@ namespace RecipeBox.Data
 
         [Key]
         public int RecipeId { get; set; }
+
         [Required]
         public string RecipeName { get; set; }
+
+        [ForeignKey(nameof(RecipeContent))]
+        public List<RecipeContent> RecipeContents { get; set; } = new List<RecipeContent>();
+
         [Required]
         public Guid OwnerId { get; set; }
+
         [Required]
         public string Instructions { get; set; }
+
         [ForeignKey(nameof(Source))]
         public int SourceId { get; set; }
+
         public virtual Source Source { get; set; }
+
         public CuisineCategory TypeOfCuisine { get; set; }
+
         public DishType TypeOfDish { get; set; }
     }
     public enum CuisineCategory

@@ -55,6 +55,9 @@ namespace RecipeBox.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                              
+                
+
                 var entity =
                     ctx
                     .Comments
@@ -66,12 +69,14 @@ namespace RecipeBox.Services
                         Text = entity.Text,
                         CreatedUtc = entity.CreatedUtc
                     };
+
             }
         }
         public bool UpdateComment(CommentEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                
                 var entity =
                     ctx
                     .Comments
@@ -82,7 +87,7 @@ namespace RecipeBox.Services
 
                 return ctx.SaveChanges() == 1;
 
-
+                
             }
         }
         public bool DeleteComment(int Id)
