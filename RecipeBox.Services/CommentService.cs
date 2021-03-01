@@ -55,34 +55,36 @@ namespace RecipeBox.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity =
-                    ctx
-                    .Comments
-                    .Single(e => e.CommentId == commentId && e.RecipeId == _recipeId);
-                return
-                    new CommentDetail
-                    {
-                        CommentId = entity.CommentId,
-                        Text = entity.Text,
-                        CreatedUtc = entity.CreatedUtc
-                    };
+                //var entity =
+                //    ctx
+                //    .Comments
+                //    .Single(e => e.CommentId == commentId && e.RecipeId == _recipeId);
+                //return
+                //    new CommentDetail
+                //    {
+                //        CommentId = entity.CommentId,
+                //        Text = entity.Text,
+                //        CreatedUtc = entity.CreatedUtc
+                //    };
+                // TODO: delete the following line when this is fixed
+                return new CommentDetail();
             }
         }
         public bool UpdateComment(CommentEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity =
-                    ctx
-                    .Comments
-                    .Single(e => e.CommentId == model.CommentId && e.RecipeId == _recipeId);
+                //var entity =
+                //    ctx
+                //    .Comments
+                //    .Single(e => e.CommentId == model.CommentId && e.RecipeId == _recipeId);
 
-                entity.Text = model.Text;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                //entity.Text = model.Text;
+                //entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
-                return ctx.SaveChanges() == 1;
-
-
+                //return ctx.SaveChanges() == 1;
+                // TODO: delete the following line when this is fixed
+                return true;
             }
         }
     }

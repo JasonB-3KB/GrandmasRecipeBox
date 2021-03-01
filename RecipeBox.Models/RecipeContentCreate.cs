@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeBox.Data
+namespace RecipeBox.Models
 {
-    public class RecipeContent
+    public class RecipeContentCreate
     {
-
-        [ForeignKey(nameof(Ingredient))]
+        public int RecipeId { get; set; }
         public int IngredientId { get; set; }
         public string IngredientQuantity { get; set; }
+
     }
 }
