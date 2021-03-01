@@ -13,6 +13,6 @@ namespace RecipeBox.Models
         public string SourceName { get; set; }
 
         [Required]
-        public string Origin { get; set; }
+        public string SourceOrigin { get; set; }
     }
 }

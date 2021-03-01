@@ -87,14 +87,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="IngredientEdit.cs" />
-    <Compile Include="RecipeContentCreate.cs" />   
-
-
-
-
-
+    <Compile Include="RecipeContentCreate.cs" />
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="RecipeListItem.cs" />
     <Compile Include="IngredientCreate.cs" />
@@ -105,6 +99,7 @@
     <Compile Include="RecipeCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceCreate.cs" />
+    <Compile Include="SourceDetail.cs" />
     <Compile Include="SourceEdit.cs" />
     <Compile Include="SourceListItem.cs" />
   </ItemGroup>
