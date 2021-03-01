@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Models
 {
-    public class CommentEdit
+    public class SourceCreate
     {
         [Required]
-        public int CommentId { get; set; }
+        public string SourceName { get; set; }
+
         [Required]
-        public string Text { get; set; }
+        public string Origin { get; set; }
     }
 }

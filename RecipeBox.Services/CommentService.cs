@@ -10,17 +10,17 @@ namespace RecipeBox.Services
 {
     public class CommentService
     {
-        private readonly int _commentId;
-        public CommentService(int commentId)
+        private readonly Guid _userId;
+        public CommentService(Guid userId)
         {
-            _commentId = commentId;
+            _userId = userId;
         }
         public bool CreateComment(CommentCreate model)
         {
             var entity =
-                new Comments()
+                new Comment()
                 {
-                    CommentId = _commentId,
+                    OwnerId = _userId,
                     Text = model.Text,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -38,7 +38,7 @@ namespace RecipeBox.Services
                 var query =
                     ctx
                     .Comments
-                    .Where(e => e.CommentId == _commentId)
+                    .Where(e => e.OwnerId == _userId )
                     .Select(
                         e =>
                         new CommentItem
@@ -55,36 +55,53 @@ namespace RecipeBox.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                //var entity =
-                //    ctx
-                //    .Comments
-                //    .Single(e => e.CommentId == commentId && e.RecipeId == _recipeId);
-                //return
-                //    new CommentDetail
-                //    {
-                //        CommentId = entity.CommentId,
-                //        Text = entity.Text,
-                //        CreatedUtc = entity.CreatedUtc
-                //    };
-                // TODO: delete the following line when this is fixed
-                return new CommentDetail();
+                              
+                
+
+                var entity =
+                    ctx
+                    .Comments
+                    .Single(e => e.CommentId == commentId);
+                return
+                    new CommentDetail
+                    {
+                        CommentId = entity.CommentId,
+                        Text = entity.Text,
+                        CreatedUtc = entity.CreatedUtc
+                    };
+
             }
         }
         public bool UpdateComment(CommentEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                //var entity =
-                //    ctx
-                //    .Comments
-                //    .Single(e => e.CommentId == model.CommentId && e.RecipeId == _recipeId);
+                
+                var entity =
+                    ctx
+                    .Comments
+                    .Single(e => e.CommentId == model.CommentId);
 
-                //entity.Text = model.Text;
-                //entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                entity.Text = model.Text;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
-                //return ctx.SaveChanges() == 1;
-                // TODO: delete the following line when this is fixed
-                return true;
+                return ctx.SaveChanges() == 1;
+
+                
+            }
+        }
+        public bool DeleteComment(int Id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Comments
+                    .Single(e => e.CommentId == Id);
+
+                ctx.Comments.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }
