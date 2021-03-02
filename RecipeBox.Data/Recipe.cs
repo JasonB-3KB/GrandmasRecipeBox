@@ -17,6 +17,7 @@ namespace RecipeBox.Data
         [Required]
         public string RecipeName { get; set; }
 
+
         [ForeignKey(nameof(RecipeContent))]
         public List<RecipeContent> RecipeContents { get; set; } = new List<RecipeContent>();
 
