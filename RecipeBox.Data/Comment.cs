@@ -8,17 +8,19 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Data
 {
-    public class Comments
+    public class Comment
     {
         [Key]
         public int CommentId { get; set; }
 
         [ForeignKey("Recipe")]
         public int RecipeId { get; set; }
-
+        public Guid OwnerId { get; set; }
+        [Required]
         public string Text { get; set; }
 
-
+        [Display(Name = "Comment Created")]
         public DateTimeOffset CreatedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

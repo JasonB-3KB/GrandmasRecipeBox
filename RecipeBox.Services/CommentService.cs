@@ -18,7 +18,7 @@ namespace RecipeBox.Services
         public bool CreateComment(CommentCreate model)
         {
             var entity =
-                new Comments()
+                new Comment()
                 {
                     CommentId = _commentId,
                     Text = model.Text,
@@ -55,36 +55,33 @@ namespace RecipeBox.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                //var entity =
-                //    ctx
-                //    .Comments
-                //    .Single(e => e.CommentId == commentId && e.RecipeId == _recipeId);
-                //return
-                //    new CommentDetail
-                //    {
-                //        CommentId = entity.CommentId,
-                //        Text = entity.Text,
-                //        CreatedUtc = entity.CreatedUtc
-                //    };
-                // TODO: delete the following line when this is fixed
-                return new CommentDetail();
+                var entity =
+                    ctx
+                    .Comments
+                    .Single(e => e.CommentId == commentId);
+                return
+                    new CommentDetail
+                    {
+                        CommentId = entity.CommentId,
+                        Text = entity.Text,
+                        CreatedUtc = entity.CreatedUtc
+                    };
             }
         }
         public bool UpdateComment(CommentEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                //var entity =
-                //    ctx
-                //    .Comments
-                //    .Single(e => e.CommentId == model.CommentId && e.RecipeId == _recipeId);
+                var entity =
+                    ctx
+                    .Comments
+                    .Single(e => e.CommentId == model.CommentId);
 
-                //entity.Text = model.Text;
-                //entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                entity.Text = model.Text;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
-                //return ctx.SaveChanges() == 1;
-                // TODO: delete the following line when this is fixed
-                return true;
+                return ctx.SaveChanges() == 1;
+
             }
         }
     }
