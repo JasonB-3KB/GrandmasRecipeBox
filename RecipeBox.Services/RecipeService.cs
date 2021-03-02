@@ -76,14 +76,14 @@ namespace RecipeBox.Services
 
             }
         }
-        public IEnumerable<RecipeDetails> GetRecipesSourceId(int Sourceid)
+        public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                     .Recipes
-                    .Where(e => e.SourceId == Sourceid && e.OwnerId == _userId)
+                    .Where(e => e.SourceId == SourceId && e.OwnerId == _userId)
                     .Select(
                             e =>
                             new RecipeDetails
