@@ -19,7 +19,6 @@ namespace RecipeBox.Data
         [Required]
         public string Text { get; set; }
 
-
         [Display(Name = "Comment Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
