@@ -57,14 +57,14 @@ namespace GrandmasRecipeBox.Controllers
             return Ok();
         }
 
-        //public IHttpActionResult Delete(int id)
-        //{
-        //    var service = CreateCommentService();
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateCommentService();
 
-        //    if (!service.DeleteComment(id))
-        //        return InternalServerError();
+            if (!service.DeleteComment(id))
+                return InternalServerError();
 
-        //    return Ok();
-        //}
+            return Ok();
+        }
     }
 }
