@@ -10,17 +10,17 @@ namespace RecipeBox.Services
 {
     public class CommentService
     {
-        private readonly int _commentId;
-        public CommentService(int commentId)
+        private readonly Guid _userId;
+        public CommentService(Guid userId)
         {
-            _commentId = commentId;
+            _userId = userId;
         }
         public bool CreateComment(CommentCreate model)
         {
             var entity =
                 new Comment()
                 {
-                    CommentId = _commentId,
+                    OwnerId = _userId,
                     Text = model.Text,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -38,7 +38,7 @@ namespace RecipeBox.Services
                 var query =
                     ctx
                     .Comments
-                    .Where(e => e.CommentId == _commentId)
+                    .Where(e => e.OwnerId == _userId )
                     .Select(
                         e =>
                         new CommentItem
@@ -66,6 +66,7 @@ namespace RecipeBox.Services
                         Text = entity.Text,
                         CreatedUtc = entity.CreatedUtc
                     };
+
             }
         }
         public bool UpdateComment(CommentEdit model)
@@ -81,7 +82,7 @@ namespace RecipeBox.Services
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
-
+            
             }
         }
     }
