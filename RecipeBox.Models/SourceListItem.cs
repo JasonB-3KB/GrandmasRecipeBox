@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Models
 {
-    class SourceListItem
+    public class SourceListItem
     {
         public string SourceName { get; set; }
 
-        public string Origin { get; set; }
+        public string SourceOrigin { get; set; }
     }
 }

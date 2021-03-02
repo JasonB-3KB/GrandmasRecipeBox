@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Models
 {
-    public class SourceEdit
+    public class SourceDetail
     {
         public int SourceId { get; set; }
         public string SourceName { get; set; }
