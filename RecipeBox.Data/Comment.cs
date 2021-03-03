@@ -13,7 +13,8 @@ namespace RecipeBox.Data
         [Key]
         public int CommentId { get; set; }
 
-        [ForeignKey("Recipe")]
+        [Required]
+        [ForeignKey(nameof(Recipe))]
         public int RecipeId { get; set; }
         public virtual Recipe Recipe { get; set; }
 
