@@ -13,13 +13,16 @@ namespace RecipeBox.Data
         [Key]
         public int CommentId { get; set; }
 
-        [ForeignKey(nameof(Recipe))]
+        [ForeignKey("Recipe")]
         public int RecipeId { get; set; }
+        public virtual Recipe Recipe { get; set; }
+
         [Required]
         public Guid OwnerId { get; set; }
+
         [Required]
         public string Text { get; set; }
-        public virtual Recipe Recipe { get; set; }
+        
 
         [Display(Name = "Comment Created")]
         public DateTimeOffset CreatedUtc { get; set; }

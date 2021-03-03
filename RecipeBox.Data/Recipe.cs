@@ -19,7 +19,9 @@ namespace RecipeBox.Data
 
 
         [ForeignKey(nameof(RecipeContent))]
-        public List<RecipeContent> RecipeContents { get; set; } = new List<RecipeContent>();
+        public int RecipeContentId { get; set; }
+        public virtual RecipeContent RecipeContent { get; set; }
+
 
         [Required]
         public Guid OwnerId { get; set; }
