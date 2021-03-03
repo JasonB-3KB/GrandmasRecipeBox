@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,12 @@ namespace RecipeBox.Data
 {
     public class RecipeContent
     {
-
-        [ForeignKey(nameof(Ingredient))]
+        [Key]
+        public int RecipeContentId { get; set; }
+        [ForeignKey("Ingredient")]
         public int IngredientId { get; set; }
+        public virtual Ingredient Ingredient { get; set; }
+
         public string IngredientQuantity { get; set; }
     }
 }

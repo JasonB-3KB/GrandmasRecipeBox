@@ -55,13 +55,10 @@ namespace RecipeBox.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                              
-                
-
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == commentId);
+                    .Single(e => e.CommentId == commentId && e.OwnerId == _userId);
                 return
                     new CommentDetail
                     {
@@ -76,28 +73,26 @@ namespace RecipeBox.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == model.CommentId);
+                    .Single(e => e.CommentId == model.CommentId && e.OwnerId == _userId);
 
                 entity.Text = model.Text;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
-
-                
+            
             }
         }
-        public bool DeleteComment(int Id)
+        public bool DeleteComment(int commentId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == Id);
+                    .Single(e => e.CommentId == commentId && e.OwnerId == _userId);
 
                 ctx.Comments.Remove(entity);
 

@@ -68,7 +68,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                         .Ingredients
-                        .Single(e => e.IngredientId == model.IngredientId && e.OwnerId == _userId);
+                        .Single(e => e.IngredientId == model.IngredientId);
 
                 entity.IngredientName = model.IngredientName;
 
