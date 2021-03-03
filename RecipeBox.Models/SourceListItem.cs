@@ -8,6 +8,8 @@ namespace RecipeBox.Models
 {
     public class SourceListItem
     {
+        public int SourceId { get; set; }
+
         public string SourceName { get; set; }
 
         public string SourceOrigin { get; set; }
