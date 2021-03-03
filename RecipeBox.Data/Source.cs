@@ -13,13 +13,10 @@ namespace RecipeBox.Data
         public int SourceId { get; set; }
 
         [Required]
-        public Guid OwnerId { get; set; }
-
-        [Required]
         public string SourceName { get; set; }
 
         [Required]
-        public string SourceOrigin { get; set; }
+        public string Origin { get; set; }
 
     }
 }
