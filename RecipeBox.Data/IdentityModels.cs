@@ -41,12 +41,6 @@ namespace RecipeBox.Data
         public DbSet<RecipeContent> RecipeContents { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
-
-        public DbSet<Source> Sources { get; set; }
-
-
-
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
