@@ -20,6 +20,13 @@ namespace GrandmasRecipeBox.Controllers
             return Ok(ingredients);
         }
 
+        public IHttpActionResult Get(int id)
+        {
+            IngredientService ingredientService = CreateIngredientService();
+            var ingredient = ingredientService.GetIngredientById(id);
+            return Ok(ingredient);
+        }
+
         public IHttpActionResult Post(IngredientCreate ingredient)
         {
             if (!ModelState.IsValid)
