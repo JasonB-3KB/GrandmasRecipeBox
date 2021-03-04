@@ -15,7 +15,7 @@ namespace RecipeBox.Data
         [ForeignKey("Ingredient")]
         public int IngredientId { get; set; }
         public virtual Ingredient Ingredient { get; set; }
-
+        
         public string IngredientQuantity { get; set; }
     }
 }
