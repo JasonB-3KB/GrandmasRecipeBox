@@ -15,10 +15,9 @@ namespace RecipeBox.Models
         [Required]
         [MaxLength(8000)]
         public string Text { get; set; }
-
-        [ForeignKey("Recipe")]
+        
         public int RecipeId { get; set; }
-        [Required]
+        
         public DateTimeOffset CreatedUtc { get; set; }
 
     }
