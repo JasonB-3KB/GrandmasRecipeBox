@@ -20,7 +20,7 @@ namespace RecipeBox.Services
             var entity =
                 new Comment()
                 {
-                    OwnerId = _userId,
+                    CommentId = model.CommentId,
                     Text = model.Text,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -37,8 +37,7 @@ namespace RecipeBox.Services
             {
                 var query =
                     ctx
-                    .Comments
-                    .Where(e => e.OwnerId == _userId )
+                    .Comments                    
                     .Select(
                         e =>
                         new CommentItem
