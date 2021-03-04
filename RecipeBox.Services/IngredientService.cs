@@ -30,7 +30,7 @@ namespace RecipeBox.Services
                     return ctx.SaveChanges() == 1;
                 }
         }
-            public IEnumerable<Ingredient> GetAllIngredients()
+            public IEnumerable<IngredientEdit> GetAllIngredients()
             {
                 using (var ctx = new ApplicationDbContext())
                 {
@@ -39,7 +39,7 @@ namespace RecipeBox.Services
                             .Ingredients
                             .Select(
                                 e =>
-                                    new Ingredient
+                                    new IngredientEdit
                                     {
                                         IngredientId = e.IngredientId,
                                         IngredientName = e.IngredientName,
@@ -56,7 +56,7 @@ namespace RecipeBox.Services
                 ctx
                     .Ingredients
                     .Where(e => e.IngredientId == ingredientId)
-                    .FirstOrDefault();
+                    .SingleOrDefault();
                 return query;
             }
         }
