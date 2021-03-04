@@ -22,7 +22,11 @@ namespace RecipeBox.Data
         public int IngredientId { get; set; }
         public virtual Ingredient Ingredient { get; set; }
 
+
         [Required]
+
+        
+
         public string IngredientQuantity { get; set; }
     }
 }

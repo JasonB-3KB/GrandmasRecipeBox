@@ -10,9 +10,9 @@ namespace RecipeBox.Models
 {
     public class CommentCreate
     {
-        [Key]
+        
         public int CommentId { get; set; }
-        [Required]
+        
         [MaxLength(8000)]
         public string Text { get; set; }
         
