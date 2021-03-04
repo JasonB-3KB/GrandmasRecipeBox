@@ -12,10 +12,21 @@ namespace RecipeBox.Data
     {
         [Key]
         public int RecipeContentId { get; set; }
-        [ForeignKey("Ingredient")]
+
+        //[ForeignKey(nameof(Recipe))]
+        //public int  RecipeId { get; set; }
+        //public virtual Recipe Recipe { get; set; }
+
+
+        [ForeignKey(nameof(Ingredient))]
         public int IngredientId { get; set; }
         public virtual Ingredient Ingredient { get; set; }
+
+
+        [Required]
+
         
+
         public string IngredientQuantity { get; set; }
     }
 }

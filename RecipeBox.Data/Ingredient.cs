@@ -12,8 +12,10 @@ namespace RecipeBox.Data
     {
         [Key]
         public int IngredientId { get; set; }
+
         [Required]
         public string IngredientName { get; set; }
+
         public Guid OwnerId { get; set; }
         // stretch goal
         // public int Kcal { get; set; }
