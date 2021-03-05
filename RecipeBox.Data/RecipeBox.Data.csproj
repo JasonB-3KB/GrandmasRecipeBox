@@ -151,24 +151,18 @@
     <Compile Include="Comment.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Ingredient.cs" />
-    <Compile Include="Migrations\202103050111401_initial.cs" />
-    <Compile Include="Migrations\202103050111401_initial.designer.cs">
-      <DependentUpon>202103050111401_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+
+    
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="Source.cs" />
+    <Compile Include="RecipeContent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103050111401_initial.resx">
-      <DependentUpon>202103050111401_initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
