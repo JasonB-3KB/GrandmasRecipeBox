@@ -46,12 +46,12 @@ namespace GrandmasRecipeBox.Controllers
             var recipe = recipeService.GetRecipeById(id);
             return Ok(recipe);
         }
-        /*public IHttpActionResult GetRecipesSourceId(int SourceId)
+        public IHttpActionResult GetRecipesSourceId(int SourceId)
         {
             RecipeService recipeService = CreateRecipeService();
             var recipes = recipeService.GetRecipesSourceId(SourceId);
             return Ok(recipes);
-        }*/
+        }
         public IHttpActionResult Put(RecipeEdit recipe)
         {
             if (!ModelState.IsValid)
