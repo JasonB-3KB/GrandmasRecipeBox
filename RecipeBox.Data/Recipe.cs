@@ -21,6 +21,9 @@ namespace RecipeBox.Data
         public Guid OwnerId { get; set; }
 
         [Required]
+        public string Ingredients { get; set; }
+
+        [Required]
         public string Instructions { get; set; }
 
         [ForeignKey(nameof(Source))]
