@@ -37,13 +37,9 @@ namespace RecipeBox.Data
         }
 
         public DbSet<Recipe> Recipes { get; set; }
-<<<<<<< HEAD
-       public DbSet<Comment> Comments { get; set; }
-=======
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<RecipeContent> RecipeContents { get; set; }
         public DbSet<Comment> Comments { get; set; }
->>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
         public DbSet<Source> Sources { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

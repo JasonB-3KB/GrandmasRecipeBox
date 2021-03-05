@@ -62,16 +62,6 @@ namespace RecipeBox.Services
                     ctx
                     .Recipes
                     .Single(e => e.RecipeId == id && e.OwnerId == _userId);
-                var comments =
-                    ctx
-                    .Comments
-                    .Where(c => c.RecipeId == entity.RecipeId);
-                string commentText = "";
-                foreach (Comment c in comments)
-                {
-                    commentText += c;
-                }
-
                 return
                     new RecipeDetails
                     {
@@ -79,17 +69,8 @@ namespace RecipeBox.Services
                         RecipeName = entity.RecipeName,
                         TypeOfCuisine = entity.TypeOfCuisine,
                         Instructions = entity.Instructions,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        CommentText = commentText
-=======
->>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
-                        //SourceName = entity.Source.SourceName,
-                        //SourceId = entity.Source.SourceId
-=======
                         SourceName = entity.Source.SourceName,
                         SourceId = entity.Source.SourceId
->>>>>>> fd42b2e23e2d43a6eea1d1571c6ac7c799009248
                         //need the ingredient info from emilie if we want to display
                     };
 
