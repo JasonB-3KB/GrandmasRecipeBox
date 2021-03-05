@@ -23,6 +23,7 @@ namespace RecipeBox.Data
 
         [Required]
         public string Instructions { get; set; }
+
         
 
         /*[ForeignKey(nameof(Source))]
