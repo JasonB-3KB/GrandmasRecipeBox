@@ -214,6 +214,7 @@
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngredientController.cs" />
+    <Compile Include="Controllers\RecipeContentController.cs" />
     <Compile Include="Controllers\RecipeController.cs" />
     <Compile Include="Controllers\SourceController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

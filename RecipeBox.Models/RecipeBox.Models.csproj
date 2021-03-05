@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="IngredientEdit.cs" />
     <Compile Include="RecipeContentCreate.cs" />
+    <Compile Include="RecipeContentEdit.cs" />
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="RecipeListItem.cs" />
     <Compile Include="IngredientCreate.cs" />
