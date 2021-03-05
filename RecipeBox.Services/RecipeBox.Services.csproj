@@ -87,7 +87,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IngredientService.cs" />
     <Compile Include="CommentService.cs" />
     <Compile Include="RecipeContentService.cs" />
     <Compile Include="RecipeService.cs" />

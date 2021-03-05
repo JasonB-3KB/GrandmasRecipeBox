@@ -15,12 +15,21 @@ namespace RecipeBox.Data
         public int RecipeId { get; set; }
 
         [Required]
+<<<<<<< HEAD
+<<<<<<< HEAD
+        public string RecipeName { get; set; }
+
+=======
+        public string RecipeName { get; set; }       
+>>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
+=======
         public string RecipeName { get; set; }
 
 
         [ForeignKey(nameof(RecipeContent))]
         public int RecipeContentId { get; set; }
         public virtual RecipeContent RecipeContent { get; set; }
+>>>>>>> fd42b2e23e2d43a6eea1d1571c6ac7c799009248
 
 
         [Required]
