@@ -18,10 +18,6 @@ namespace RecipeBox.Data
         public string RecipeName { get; set; }
 
 
-        [ForeignKey(nameof(RecipeContent))]
-        public int RecipeContentId { get; set; }
-        public virtual RecipeContent RecipeContent { get; set; }
-
 
         [Required]
         public Guid OwnerId { get; set; }
