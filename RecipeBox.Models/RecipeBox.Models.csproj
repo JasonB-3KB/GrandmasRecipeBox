@@ -87,7 +87,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="RecipeContentEdit.cs" />
+=======
+    <Compile Include="IngredientEdit.cs" />
+>>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="RecipeListItem.cs" />
     <Compile Include="CommentCreate.cs" />

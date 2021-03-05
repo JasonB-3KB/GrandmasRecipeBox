@@ -150,6 +150,15 @@
   <ItemGroup>
     <Compile Include="Comment.cs" />
     <Compile Include="IdentityModels.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Ingredient.cs" />
+    <Compile Include="Migrations\202103050027190_initial.cs" />
+    <Compile Include="Migrations\202103050027190_initial.designer.cs">
+      <DependentUpon>202103050027190_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+>>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="Source.cs" />
@@ -157,6 +166,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202103050027190_initial.resx">
+      <DependentUpon>202103050027190_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

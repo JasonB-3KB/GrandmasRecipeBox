@@ -23,7 +23,7 @@ namespace RecipeBox.Services
                     OwnerId = _userId,
                     RecipeName = model.RecipeName,
                     Instructions = model.Instructions,
-                    SourceId = model.SourceId,
+                    //SourceId = model.SourceId,
                     TypeOfCuisine = model.TypeOfCuisine,
                     TypeOfDish = model.TypeOfDish
                 };
@@ -79,7 +79,10 @@ namespace RecipeBox.Services
                         RecipeName = entity.RecipeName,
                         TypeOfCuisine = entity.TypeOfCuisine,
                         Instructions = entity.Instructions,
+<<<<<<< HEAD
                         CommentText = commentText
+=======
+>>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
                         //SourceName = entity.Source.SourceName,
                         //SourceId = entity.Source.SourceId
                         //need the ingredient info from emilie if we want to display
@@ -87,7 +90,7 @@ namespace RecipeBox.Services
 
             }
         }
-        public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)
+        /*public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -111,7 +114,7 @@ namespace RecipeBox.Services
                             );
                 return query.ToArray();
             }
-        }
+        }*/
         public bool EditRecipe(RecipeEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -124,7 +127,7 @@ namespace RecipeBox.Services
                 entity.TypeOfCuisine = model.TypeOfCuisine;
                 entity.TypeOfDish = model.TypeOfDish;
                 entity.Instructions = model.Instructions;
-                entity.SourceId = model.SourceId;
+                //entity.SourceId = model.SourceId;
 
                 return ctx.SaveChanges() == 1;
             }

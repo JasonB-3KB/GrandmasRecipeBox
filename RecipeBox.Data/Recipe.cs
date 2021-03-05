@@ -15,8 +15,12 @@ namespace RecipeBox.Data
         public int RecipeId { get; set; }
 
         [Required]
+<<<<<<< HEAD
         public string RecipeName { get; set; }
 
+=======
+        public string RecipeName { get; set; }       
+>>>>>>> 0a4aae2383ef581ca34cb9487a402295641c7367
 
 
         [Required]
@@ -24,11 +28,12 @@ namespace RecipeBox.Data
 
         [Required]
         public string Instructions { get; set; }
+        
 
-        [ForeignKey(nameof(Source))]
+        /*[ForeignKey(nameof(Source))]
         public int SourceId { get; set; }
 
-        public virtual Source Source { get; set; }
+        public virtual Source Source { get; set; }*/
 
         public CuisineCategory TypeOfCuisine { get; set; }
 
