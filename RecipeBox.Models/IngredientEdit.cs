@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace RecipeBox.Models
 {
-    class RecipeContentEdit
+    public class IngredientEdit
     {
-        public int RecipeContentId { get; set; }
         public int IngredientId { get; set; }
-        public string IngredientQuantity { get; set; }
+        public string IngredientName { get; set; }
     }
 }
