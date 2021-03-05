@@ -11,10 +11,10 @@ namespace RecipeBox.Models
     {
         public int RecipeId { get; set; }
         public string RecipeName { get; set; }
-        public int SourceId { get; set; }
-        public string SourceName { get; set; }
+        //public int SourceId { get; set; }
+        //public string SourceName { get; set; }
         public string Instructions { get; set; }
-        public int MyProperty { get; set; }
+        //public int MyProperty { get; set; }
         public CuisineCategory TypeOfCuisine { get; set; }
         public DishType TypeOfDish { get; set; }
     }
