@@ -22,6 +22,7 @@ namespace RecipeBox.Services
                 {
                     OwnerId = _userId,
                     RecipeName = model.RecipeName,
+                    Ingredients = model.Ingredients,
                     Instructions = model.Instructions,
                     SourceId = model.SourceId,
                     TypeOfCuisine = model.TypeOfCuisine,
@@ -67,11 +68,11 @@ namespace RecipeBox.Services
                     {
                         RecipeId = entity.RecipeId,
                         RecipeName = entity.RecipeName,
+                        Ingredients = entity.Ingredients,
                         TypeOfCuisine = entity.TypeOfCuisine,
                         Instructions = entity.Instructions,
                         SourceName = entity.Source.SourceName,
                         SourceId = entity.Source.SourceId
-                        //need the ingredient info from emilie if we want to display
                     };
 
             }
@@ -90,12 +91,12 @@ namespace RecipeBox.Services
                             {
                                 RecipeId = e.RecipeId,
                                 RecipeName = e.RecipeName,
+                                Ingredients = e.Ingredients,
                                 TypeOfCuisine = e.TypeOfCuisine,
                                 TypeOfDish = e.TypeOfDish,
                                 Instructions = e.Instructions,
                                 SourceId = e.Source.SourceId,
                                 SourceName = e.Source.SourceName
-                                //need the ingredient info from emilie if we want to display
                             }
                             );
                 return query.ToArray();
@@ -110,6 +111,7 @@ namespace RecipeBox.Services
                     .Recipes
                     .Single(e => e.RecipeId == model.RecipeId && e.OwnerId == _userId);
                 entity.RecipeName = model.RecipeName;
+                entity.Ingredients = model.Ingredients;
                 entity.TypeOfCuisine = model.TypeOfCuisine;
                 entity.TypeOfDish = model.TypeOfDish;
                 entity.Instructions = model.Instructions;
