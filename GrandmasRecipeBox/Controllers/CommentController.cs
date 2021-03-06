@@ -43,7 +43,12 @@ namespace GrandmasRecipeBox.Controllers
             var comments = commentService.GetCommentById(id);
             return Ok(comments);
         }
-
+        public IHttpActionResult GetRecipeComments(int RecipeId)
+        {
+            CommentService commentService = CreateCommentService();
+            var comments = commentService.GetCommentsByRecipeId(RecipeId);
+            return Ok(comments);
+        }
         public IHttpActionResult Put(CommentEdit comment)
         {
             if (!ModelState.IsValid)

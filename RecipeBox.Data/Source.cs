@@ -11,7 +11,6 @@ namespace RecipeBox.Data
     {
         [Key]
         public int SourceId { get; set; }
-
         
         public Guid OwnerId { get; set; }
 

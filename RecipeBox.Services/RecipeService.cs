@@ -71,10 +71,11 @@ namespace RecipeBox.Services
                         Ingredients = entity.Ingredients,
                         TypeOfCuisine = entity.TypeOfCuisine,
                         Instructions = entity.Instructions,
+                        Text = entity.Comment.Text,
                         SourceName = entity.Source.SourceName,
                         SourceId = entity.Source.SourceId
                     };
-
+                
             }
         }
         public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)

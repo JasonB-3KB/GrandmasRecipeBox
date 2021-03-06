@@ -11,6 +11,8 @@ namespace RecipeBox.Models
     {
         public int CommentId { get; set; }
         public string Text { get; set; }
+        public int RecipeId { get; set; }
+
         [Display(Name = "Comment Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Comment Modified")]
