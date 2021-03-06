@@ -10,6 +10,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "RecipeBox.Data.ApplicationDbContext";
         }
 
         protected override void Seed(RecipeBox.Data.ApplicationDbContext context)
