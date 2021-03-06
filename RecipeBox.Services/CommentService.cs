@@ -45,6 +45,7 @@ namespace RecipeBox.Services
                         {
                             CommentId = e.CommentId,
                             Text = e.Text,
+                            RecipeId = e.Recipe.RecipeId,
                             CreatedUtc = e.CreatedUtc
                         }
                         );
@@ -68,7 +69,7 @@ namespace RecipeBox.Services
                             CommentId = e.CommentId,
                             Text = e.Text,
                             Instructions = e.Recipe.Instructions,
-                            Ingredients = e.Recipe.Ingredients,
+                            //Ingredients = e.Recipe.Ingredients,
                             TypeOfCuisine = e.Recipe.TypeOfCuisine,
                             TypeOfDish = e.Recipe.TypeOfDish
                         }
@@ -89,6 +90,7 @@ namespace RecipeBox.Services
                     {
                         CommentId = entity.CommentId,
                         Text = entity.Text,
+                        RecipeId = entity.Recipe.RecipeId,
                         CreatedUtc = entity.CreatedUtc
                     };
 

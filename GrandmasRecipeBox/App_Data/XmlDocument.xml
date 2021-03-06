@@ -481,6 +481,13 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:GrandmasRecipeBox.Controllers.CommentController.Get(System.Int32)">
+            <summary>
+            Get Comment by Id
+            </summary>
+            <param name="id"></param>
+            <returns>It's going to return the requested comments</returns>
+        </member>
         <member name="M:GrandmasRecipeBox.Controllers.RecipeController.Get">
             <summary>
             This allows the user to retreive a recipe
