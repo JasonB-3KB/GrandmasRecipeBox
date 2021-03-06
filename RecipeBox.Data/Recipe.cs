@@ -22,6 +22,7 @@ namespace RecipeBox.Data
 
         [Required]
         public string Ingredients { get; set; }
+        public string Comment { get; set; }
 
         [Required]
         public string Instructions { get; set; }        
