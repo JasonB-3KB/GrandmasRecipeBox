@@ -84,7 +84,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == commentId && e.OwnerId == _userId);
+                    .Single(e => e.CommentId == commentId);
                 return
                     new CommentDetail
                     {
@@ -103,7 +103,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == model.CommentId && e.OwnerId == _userId);
+                    .Single(e => e.CommentId == model.CommentId);
 
                 entity.CommentId = model.CommentId;
                 entity.Text = model.Text;
@@ -121,7 +121,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == commentId && e.OwnerId == _userId);
+                    .Single(e => e.CommentId == commentId);
 
                 ctx.Comments.Remove(entity);
 
