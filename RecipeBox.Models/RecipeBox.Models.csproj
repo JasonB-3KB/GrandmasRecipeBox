@@ -108,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RecipeBox.Data\RecipeBox.Data.csproj">
-      <Project>{59d97f9f-99a5-4328-a0d6-68d81a645ded}</Project>
+      <Project>{59D97F9F-99A5-4328-A0D6-68D81A645DED}</Project>
       <Name>RecipeBox.Data</Name>
     </ProjectReference>
   </ItemGroup>
