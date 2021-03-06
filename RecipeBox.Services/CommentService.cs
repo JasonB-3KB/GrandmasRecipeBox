@@ -52,7 +52,7 @@ namespace RecipeBox.Services
                 return query.ToArray();
             }
         }
-        public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
+        /*public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -76,7 +76,7 @@ namespace RecipeBox.Services
                         );
                 return query.ToArray();
             }
-        }
+        }*/
         public CommentDetail GetCommentById(int commentId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -84,7 +84,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == commentId && e.OwnerId == _userId);
+                    .Single(e => e.CommentId == commentId);
                 return
                     new CommentDetail
                     {
@@ -102,7 +102,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == model.CommentId && e.OwnerId == _userId);
+                    .Single(e => e.CommentId == model.CommentId);
 
                 entity.CommentId = model.CommentId;
                 entity.Text = model.Text;
@@ -120,7 +120,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Comments
-                    .Single(e => e.CommentId == commentId && e.OwnerId == _userId);
+                    .Single(e => e.CommentId == commentId);
 
                 ctx.Comments.Remove(entity);
 
