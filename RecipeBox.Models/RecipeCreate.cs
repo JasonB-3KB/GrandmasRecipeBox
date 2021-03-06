@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeBox.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,11 @@ namespace RecipeBox.Models
 {
     public class RecipeCreate
     {
-
+        public string RecipeName { get; set; }
+        public string Ingredients { get; set; }
+        public string Instructions { get; set; }
+        public int SourceId { get; set; }
+        public CuisineCategory TypeOfCuisine { get; set; }
+        public DishType TypeOfDish { get; set; }
     }
 }

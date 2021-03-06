@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 
+
 namespace RecipeBox.Data
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
@@ -14,11 +15,13 @@ namespace RecipeBox.Data
     {
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
-            // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
-            var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
+        // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
+        var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string FullName { get; set; }//...................................................................................
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -34,6 +37,8 @@ namespace RecipeBox.Data
         }
 
         public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Source> Sources { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
