@@ -52,7 +52,7 @@ namespace RecipeBox.Services
                 return query.ToArray();
             }
         }
-        public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
+        /*public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -76,7 +76,7 @@ namespace RecipeBox.Services
                         );
                 return query.ToArray();
             }
-        }
+        }*/
         public CommentDetail GetCommentById(int commentId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -93,7 +93,6 @@ namespace RecipeBox.Services
                         RecipeId = entity.Recipe.RecipeId,
                         CreatedUtc = entity.CreatedUtc
                     };
-
             }
         }
         public bool UpdateComment(CommentEdit model)
