@@ -501,13 +501,6 @@
             <param name="id"></param>
             <returns>It's going to return the requested comments</returns>
         </member>
-        <member name="M:GrandmasRecipeBox.Controllers.CommentController.GetRecipeComments(System.Int32)">
-            <summary>
-            Get Comment by Recipe Id
-            </summary>
-            <param name="RecipeId"></param>
-            <returns>It's going to return the comments associated with a Recipe</returns>
-        </member>
         <member name="M:GrandmasRecipeBox.Controllers.CommentController.Put(RecipeBox.Models.CommentEdit)">
             <summary>
             Edit a Comment
