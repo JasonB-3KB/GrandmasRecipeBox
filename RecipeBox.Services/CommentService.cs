@@ -22,6 +22,7 @@ namespace RecipeBox.Services
                 {
                     CommentId = model.CommentId,
                     Text = model.Text,
+                    RecipeId = model.RecipeId,
                     CreatedUtc = DateTimeOffset.Now
                 };
 
@@ -44,7 +45,33 @@ namespace RecipeBox.Services
                         {
                             CommentId = e.CommentId,
                             Text = e.Text,
+                            RecipeId = e.Recipe.RecipeId,
                             CreatedUtc = e.CreatedUtc
+                        }
+                        );
+                return query.ToArray();
+            }
+        }
+        public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Comments
+                    .Where(e => e.RecipeId == RecipeId && e.OwnerId == _userId)
+                    .Select(
+                        e =>
+                        new RecipeCommentDetail
+                        {
+                            RecipeId = e.Recipe.RecipeId,
+                            RecipeName = e.Recipe.RecipeName,
+                            CommentId = e.CommentId,
+                            Text = e.Text,
+                            Instructions = e.Recipe.Instructions,
+                            //Ingredients = e.Recipe.Ingredients,
+                            TypeOfCuisine = e.Recipe.TypeOfCuisine,
+                            TypeOfDish = e.Recipe.TypeOfDish
                         }
                         );
                 return query.ToArray();
@@ -63,6 +90,7 @@ namespace RecipeBox.Services
                     {
                         CommentId = entity.CommentId,
                         Text = entity.Text,
+                        RecipeId = entity.Recipe.RecipeId,
                         CreatedUtc = entity.CreatedUtc
                     };
 
@@ -77,7 +105,9 @@ namespace RecipeBox.Services
                     .Comments
                     .Single(e => e.CommentId == model.CommentId && e.OwnerId == _userId);
 
+                entity.CommentId = model.CommentId;
                 entity.Text = model.Text;
+                entity.RecipeId = model.RecipeId;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;

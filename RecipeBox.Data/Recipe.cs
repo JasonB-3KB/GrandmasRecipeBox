@@ -22,9 +22,10 @@ namespace RecipeBox.Data
 
         [Required]
         public string Ingredients { get; set; }
+        public string Comment { get; set; }
 
         [Required]
-        public string Instructions { get; set; }
+        public string Instructions { get; set; }        
 
         [ForeignKey(nameof(Source))]
         public int SourceId { get; set; }

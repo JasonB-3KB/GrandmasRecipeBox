@@ -22,8 +22,8 @@ namespace RecipeBox.Data
         public Guid OwnerId { get; set; }
 
         [Required]
-        public string Text { get; set; }
-        
+        public string Text { get; set; }        
+
 
         [Display(Name = "Comment Created")]
         public DateTimeOffset CreatedUtc { get; set; }
