@@ -93,7 +93,6 @@ namespace RecipeBox.Services
                         RecipeId = entity.Recipe.RecipeId,
                         CreatedUtc = entity.CreatedUtc
                     };
-
             }
         }
         public bool UpdateComment(CommentEdit model)
