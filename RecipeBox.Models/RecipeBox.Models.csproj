@@ -87,6 +87,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RecipeCommentDetail.cs" />
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="RecipeListItem.cs" />
     <Compile Include="CommentCreate.cs" />
