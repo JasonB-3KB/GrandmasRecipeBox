@@ -578,32 +578,19 @@
             <param name="source"></param>
             <returns>200 Ok</returns>
         </member>
-        <member name="M:GrandmasRecipeBox.Controllers.SourceController.Get">
-            <summary>
-            This allows the user to retrieve all sources
-            </summary>
-            <returns>All sources</returns>
-        </member>
-        <member name="M:GrandmasRecipeBox.Controllers.SourceController.Post(RecipeBox.Models.SourceCreate)">
-            <summary>
-            This allows a user to post a source
-            </summary>
-            <param name="source"></param>
-            <returns>200 ok</returns>
-        </member>
         <member name="M:GrandmasRecipeBox.Controllers.SourceController.Get(System.Int32)">
             <summary>
-            The user can look for a specific source
+            This gives the source by sourceId
             </summary>
             <param name="id"></param>
-            <returns>A source specific to the id</returns>
+            <returns>The specified source</returns>
         </member>
         <member name="M:GrandmasRecipeBox.Controllers.SourceController.Put(RecipeBox.Models.SourceEdit)">
             <summary>
-            The user can update the source
+            You can update the information on a source
             </summary>
             <param name="source"></param>
-            <returns>200 Ok</returns>
+            <returns>200 ok</returns>
         </member>
     </members>
 </doc>
