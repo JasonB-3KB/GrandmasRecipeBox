@@ -488,6 +488,23 @@
             <param name="id"></param>
             <returns>It's going to return the requested comments</returns>
         </member>
+<
+        <member name="M:GrandmasRecipeBox.Controllers.CommentController.Put(RecipeBox.Models.CommentEdit)">
+            <summary>
+            Edit a Comment
+            </summary>
+            <param name="comment"></param>
+            <returns>Edit a Comment</returns>
+        </member>
+        <member name="M:GrandmasRecipeBox.Controllers.CommentController.Delete(System.Int32)">
+            <summary>
+            Delete a Comment by Id
+            </summary>
+            <param name="id"></param>
+            <returns>Deleted Comment</returns>
+        </member>
+
+
         <member name="M:GrandmasRecipeBox.Controllers.RecipeController.Get">
             <summary>
             This allows the user to retreive a recipe
