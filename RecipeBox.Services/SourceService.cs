@@ -67,7 +67,7 @@ namespace RecipeBox.Services
                 return
                     new SourceDetail
                     {
-                        //SourceId = entity.SourceId,
+                        SourceId = entity.SourceId,
                         SourceName = entity.SourceName,
                         SourceOrigin = entity.SourceOrigin
                     };
