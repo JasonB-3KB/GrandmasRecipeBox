@@ -83,7 +83,7 @@ namespace RecipeBox.Services
                         .Sources
                         .Single(e => e.SourceId == model.SourceId && e.OwnerId == _userId);
 
-                //entity.SourceId = model.SourceId;
+                entity.SourceId = model.SourceId;
                 entity.SourceName = model.SourceName;
                 entity.SourceOrigin = model.SourceOrigin;
 
