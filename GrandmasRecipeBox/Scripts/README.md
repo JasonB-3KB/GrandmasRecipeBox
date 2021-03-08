@@ -46,8 +46,8 @@ public bool CreateRecipe(RecipeCreate model)
 * Did the recipe not feed enough? Or did it seem too tomato-ey? Add a comment to your recipe for future reference!
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Add external source recipes
+* Search by type of food
 
 ## Status
 Project is: _in progress_, there is still a lot of room for growth within this application.
