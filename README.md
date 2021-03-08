@@ -56,11 +56,11 @@ Project is: _in progress_, there is still a lot of room for growth within this a
 This project was inspired by the desire to cook a variety of foods, but with the simplicity of using a one stop solution in the form of an app.
 
 ## Instructions
-*Using Postman- register for your token
-*Start running the app- copy and paste your link for Posting a source from your localhost API page
-*Once you have posted a source with a 200 status, then you are ready to add a recipe using that source ID
-*After the recipe is posted, you can now use the Recipe Id to post a comment on your recipe.
-*If you now choose the Get recipe endpoint, you will see all of your information for that recipe, including a comment!
+* Using Postman- register for your token
+* Start running the app- copy and paste your link for Posting a source from your localhost API page
+* Once you have posted a source with a 200 status, then you are ready to add a recipe using that source ID
+* After the recipe is posted, you can now use the Recipe Id to post a comment on your recipe.
+* If you now choose the Get recipe endpoint, you will see all of your information for that recipe, including a comment!
 
 ## Contact
 Created by @Team_wysiwyg - Jeannette Schriner, Emilie Rains, Bobby Hammer, and Jason Bagwill
