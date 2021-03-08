@@ -481,19 +481,6 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:GrandmasRecipeBox.Controllers.CommentController.Get">
-            <summary>
-            Get a Comment
-            </summary>
-            <returns>Returns a Comment</returns>
-        </member>
-        <member name="M:GrandmasRecipeBox.Controllers.CommentController.Post(RecipeBox.Models.CommentCreate)">
-            <summary>
-            Create a Comment on a Recipe
-            </summary>
-            <param name="comment"></param>
-            <returns>Comment Created</returns>
-        </member>
         <member name="M:GrandmasRecipeBox.Controllers.CommentController.Get(System.Int32)">
             <summary>
             Get Comment by Id
@@ -501,6 +488,7 @@
             <param name="id"></param>
             <returns>It's going to return the requested comments</returns>
         </member>
+<
         <member name="M:GrandmasRecipeBox.Controllers.CommentController.Put(RecipeBox.Models.CommentEdit)">
             <summary>
             Edit a Comment
@@ -515,6 +503,8 @@
             <param name="id"></param>
             <returns>Deleted Comment</returns>
         </member>
+
+
         <member name="M:GrandmasRecipeBox.Controllers.RecipeController.Get">
             <summary>
             This allows the user to retreive a recipe
