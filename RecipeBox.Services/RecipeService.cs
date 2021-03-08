@@ -71,12 +71,23 @@ namespace RecipeBox.Services
                         Ingredients = entity.Ingredients,
                         TypeOfCuisine = entity.TypeOfCuisine,
                         Instructions = entity.Instructions,
-                        //Text = entity.Comment.Text,
+                        Comments = GetListOfCommentStrings(entity.Comments),
                         SourceName = entity.Source.SourceName,
                         SourceId = entity.Source.SourceId
                     };
                 
             }
+        }
+        public List<string> GetListOfCommentStrings(List<Comment> comments)
+        {
+            List<string> commentText = new List<string>();
+
+            foreach (Comment c in comments)
+            {
+                commentText.Add(c.Text);
+            }
+            return
+                    commentText;
         }
         public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)
         {
