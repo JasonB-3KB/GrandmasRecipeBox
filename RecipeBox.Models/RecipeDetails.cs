@@ -14,12 +14,8 @@ namespace RecipeBox.Models
         public string Ingredients { get; set; }
         public int SourceId { get; set; }
         public string SourceName { get; set; }
-        public string Instructions { get; set; }
-
-       
-        public List<string> Comments { get; set; }
-
-        public string Text { get; set; }
+        public string Instructions { get; set; }       
+        public List<string> Comments { get; set; }     
 
         public CuisineCategory TypeOfCuisine { get; set; }
         public DishType TypeOfDish { get; set; }
