@@ -318,7 +318,11 @@ namespace GrandmasRecipeBox.Controllers
 
             return logins;
         }
-
+        /// <summary>
+        /// This allows a New User to get an account
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>200 Ok  Will need to acquire a token after this step</returns>
         // POST api/Account/Register
         [AllowAnonymous]
         [Route("Register")]
