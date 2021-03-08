@@ -52,31 +52,31 @@ namespace RecipeBox.Services
                 return query.ToArray();
             }
         }
-        /*public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query =
-                    ctx
-                    .Comments
-                    .Where(e => e.RecipeId == RecipeId && e.OwnerId == _userId)
-                    .Select(
-                        e =>
-                        new RecipeCommentDetail
-                        {
-                            RecipeId = e.Recipe.RecipeId,
-                            RecipeName = e.Recipe.RecipeName,
-                            CommentId = e.CommentId,
-                            Text = e.Text,
-                            Instructions = e.Recipe.Instructions,
-                            //Ingredients = e.Recipe.Ingredients,
-                            TypeOfCuisine = e.Recipe.TypeOfCuisine,
-                            TypeOfDish = e.Recipe.TypeOfDish
-                        }
-                        );
-                return query.ToArray();
-            }
-        }*/
+        //public IEnumerable<RecipeCommentDetail> GetCommentsByRecipeId(int RecipeId)
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var query =
+        //            ctx
+        //            .Comments
+        //            .Where(e => e.RecipeId == RecipeId && e.OwnerId == _userId)
+        //            .Select(
+        //                e =>
+        //                new RecipeCommentDetail
+        //                {
+        //                    RecipeId = e.Recipe.RecipeId,
+        //                    RecipeName = e.Recipe.RecipeName,
+        //                    CommentId = e.CommentId,
+        //                    Text = e.Text,
+        //                    Instructions = e.Recipe.Instructions,
+        //                    //Ingredients = e.Recipe.Ingredients,
+        //                    TypeOfCuisine = e.Recipe.TypeOfCuisine,
+        //                    TypeOfDish = e.Recipe.TypeOfDish
+        //                }
+        //                );
+        //        return query.ToArray();
+        //    }
+        //}
         public CommentDetail GetCommentById(int commentId)
         {
             using (var ctx = new ApplicationDbContext())
