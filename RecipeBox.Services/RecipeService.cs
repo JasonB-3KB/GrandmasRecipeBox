@@ -81,15 +81,15 @@ namespace RecipeBox.Services
         public List<string> GetListOfCommentStrings(List<Comment> comments)
         {
             List<string> commentText = new List<string>();
-            
-        foreach (Comment c in comments)
-                {
-                    commentText.Add(c.Text);
-                }
+
+            foreach (Comment c in comments)
+            {
+                commentText.Add(c.Text);
+            }
             return
                     commentText;
         }
-    public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)
+        public IEnumerable<RecipeDetails> GetRecipesSourceId(int SourceId)
         {
             using (var ctx = new ApplicationDbContext())
             {

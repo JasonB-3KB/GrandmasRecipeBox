@@ -19,25 +19,21 @@ namespace GrandmasRecipeBox.Controllers
             var sourceService = new SourceService(userId);
             return sourceService; 
         }
-
         /// <summary>
-        /// This allows the user to retrieve all sources
+        /// The user can get a list of all sources
         /// </summary>
-        /// <returns>All sources</returns>
-
+        /// <returns>The list of sources</returns>
         public IHttpActionResult Get()
         {
             SourceService sourceService = CreateSourceService();
             var sources = sourceService.GetSources();
             return Ok(sources);
         }
-
         /// <summary>
-        /// This allows a user to post a source
+        /// This allows the user to enter a source for the recipe
         /// </summary>
         /// <param name="source"></param>
-        /// <returns>200 ok</returns>
-
+        /// <returns>200 Ok</returns>
         public IHttpActionResult Post(SourceCreate source)
         {
             if (!ModelState.IsValid)
@@ -50,26 +46,22 @@ namespace GrandmasRecipeBox.Controllers
 
             return Ok();
         }
-
         /// <summary>
-        /// The user can look for a specific source
+        /// This gives the source by sourceId
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A source specific to the id</returns>
-
+        /// <returns>The specified source</returns>
         public IHttpActionResult Get(int id)
         {
             SourceService sourceService = CreateSourceService();
             var source = sourceService.GetSourceById(id);
             return Ok(source);
         }
-
         /// <summary>
-        /// The user can update the source
+        /// You can update the information on a source
         /// </summary>
         /// <param name="source"></param>
-        /// <returns>200 Ok</returns>
-
+        /// <returns>200 ok</returns>
         public IHttpActionResult Put(SourceEdit source)
         {
             if (!ModelState.IsValid)

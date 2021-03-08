@@ -56,17 +56,25 @@ namespace GrandmasRecipeBox.Controllers
             var comments = commentService.GetCommentById(id);
             return Ok(comments);
         }
+
+        ///// <summary>
+        ///// Get Comment by Recipe Id
+        ///// </summary>
+        ///// <param name="RecipeId"></param>
+        ///// <returns>It's going to return the comments associated with a Recipe</returns>
+
         /// <summary>
         /// Get Comment by Recipe Id
         /// </summary>
         /// <param name="RecipeId"></param>
         /// <returns>It's going to return the comments associated with a Recipe</returns>
-        /*public IHttpActionResult GetRecipeComments(int RecipeId)
-        {
-            CommentService commentService = CreateCommentService();
-            var comments = commentService.GetCommentsByRecipeId(RecipeId);
-            return Ok(comments);
-        }*/
+
+        //public IHttpActionResult GetRecipeComments(int RecipeId)
+        //{
+        //    CommentService commentService = CreateCommentService();
+        //    var comments = commentService.GetCommentsByRecipeId(RecipeId);
+        //    return Ok(comments);
+        //}
         /// <summary>
         /// Edit a Comment
         /// </summary>

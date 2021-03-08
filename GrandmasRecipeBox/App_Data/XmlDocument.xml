@@ -481,6 +481,13 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:GrandmasRecipeBox.Controllers.AccountController.Register(GrandmasRecipeBox.Models.RegisterBindingModel)">
+            <summary>
+            This allows a New User to get an account
+            </summary>
+            <param name="model"></param>
+            <returns>200 Ok  Will need to acquire a token after this step</returns>
+        </member>
         <member name="M:GrandmasRecipeBox.Controllers.CommentController.Get">
             <summary>
             Get a Comment
@@ -556,6 +563,19 @@
             Permanently delete a recipe by recipeId
             </summary>
             <param name="id"></param>
+            <returns>200 Ok</returns>
+        </member>
+        <member name="M:GrandmasRecipeBox.Controllers.SourceController.Get">
+            <summary>
+            The user can get a list of all sources
+            </summary>
+            <returns>The list of sources</returns>
+        </member>
+        <member name="M:GrandmasRecipeBox.Controllers.SourceController.Post(RecipeBox.Models.SourceCreate)">
+            <summary>
+            This allows the user to enter a source for the recipe
+            </summary>
+            <param name="source"></param>
             <returns>200 Ok</returns>
         </member>
         <member name="M:GrandmasRecipeBox.Controllers.SourceController.Get">
