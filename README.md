@@ -1,6 +1,6 @@
 # GrandmasRecipeBox
 # Project Name
-> Here goes your awesome project description!
+> Here goes your awesome project description!1
 
 ## Table of contents
 * [General info](#general-info)
