@@ -481,6 +481,7 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+<<<<<<< HEAD
         <member name="M:GrandmasRecipeBox.Controllers.AccountController.Register(GrandmasRecipeBox.Models.RegisterBindingModel)">
             <summary>
             This allows a New User to get an account
@@ -501,6 +502,8 @@
             <param name="comment"></param>
             <returns>Comment Created</returns>
         </member>
+=======
+>>>>>>> a7c86244b16ec25d6016678ab4904abc2fbf9265
         <member name="M:GrandmasRecipeBox.Controllers.CommentController.Get(System.Int32)">
             <summary>
             Get Comment by Id
@@ -508,6 +511,7 @@
             <param name="id"></param>
             <returns>It's going to return the requested comments</returns>
         </member>
+<
         <member name="M:GrandmasRecipeBox.Controllers.CommentController.Put(RecipeBox.Models.CommentEdit)">
             <summary>
             Edit a Comment
@@ -522,6 +526,8 @@
             <param name="id"></param>
             <returns>Deleted Comment</returns>
         </member>
+
+
         <member name="M:GrandmasRecipeBox.Controllers.RecipeController.Get">
             <summary>
             This allows the user to retreive a recipe
