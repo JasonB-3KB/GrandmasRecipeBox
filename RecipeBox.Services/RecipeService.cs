@@ -121,7 +121,7 @@ namespace RecipeBox.Services
                 var entity =
                     ctx
                     .Recipes
-                    .Single(e => e.RecipeId == e.RecipeId && e.OwnerId == _userId);
+                    .Single(e => e.RecipeId == model.RecipeId && e.OwnerId == _userId);
                 entity.RecipeName = model.RecipeName;
                 entity.Ingredients = model.Ingredients;
                 entity.TypeOfCuisine = model.TypeOfCuisine;
