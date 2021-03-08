@@ -71,7 +71,7 @@ namespace RecipeBox.Services
                         Ingredients = entity.Ingredients,
                         TypeOfCuisine = entity.TypeOfCuisine,
                         Instructions = entity.Instructions,
-                        //Text = entity.Comment.Text,
+                        Comments = GetListOfCommentStrings(entity.Comments),
                         SourceName = entity.Source.SourceName,
                         SourceId = entity.Source.SourceId
                     };
