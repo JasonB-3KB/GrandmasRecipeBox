@@ -43,7 +43,7 @@ namespace GrandmasRecipeBox.Controllers
             if (!service.CreateComment(comment))
                 return InternalServerError();
 
-            return Ok();
+            return Ok("Comment has been created");
         }
         /// <summary>
         /// Get Comment by Id
@@ -90,7 +90,7 @@ namespace GrandmasRecipeBox.Controllers
             if (!service.UpdateComment(comment))
                 return InternalServerError();
 
-            return Ok();
+            return Ok("Comment has been updated");
         }
         /// <summary>
         /// Delete a Comment by Id
@@ -104,7 +104,7 @@ namespace GrandmasRecipeBox.Controllers
             if (!service.DeleteComment(id))
                 return InternalServerError();
 
-            return Ok();
+            return Ok("Comment has been deleted");
         }
     }
 }
